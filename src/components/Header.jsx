@@ -1,33 +1,38 @@
-function Header({ activeCategory, searchQuery, setSearchQuery, handleNavClick, handleHomeClick }) {
+import { NavLink, Link } from 'react-router-dom';
+
+function Header({ searchQuery, setSearchQuery }) {
   return (
     <header className="header">
       <div className="header-content">
-        <h1 className="logo" onClick={handleHomeClick} style={{ cursor: 'pointer' }}>StreamHub</h1>
+        <Link to="/" style={{ textDecoration: 'none' }}>
+          <h1 className="logo" style={{ cursor: 'pointer' }}>StreamHub</h1>
+        </Link>
         <nav className="nav">
-          <button
-            className={`nav-link ${activeCategory === 'All' ? 'active' : ''}`}
-            onClick={handleHomeClick}
+          <NavLink
+            to="/"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+            end
           >
             Home
-          </button>
-          <button
-            className={`nav-link ${activeCategory === 'Movie' ? 'active' : ''}`}
-            onClick={() => handleNavClick('Movie')}
+          </NavLink>
+          <NavLink
+            to="/movies"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
             Movies
-          </button>
-          <button
-            className={`nav-link ${activeCategory === 'Web Series' ? 'active' : ''}`}
-            onClick={() => handleNavClick('Web Series')}
+          </NavLink>
+          <NavLink
+            to="/web-series"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
             Web Series
-          </button>
-          <button 
-            className={`nav-link ${activeCategory === 'My List' ? 'active' : ''}`}
-            onClick={() => handleNavClick('My List')}
+          </NavLink>
+          <NavLink 
+            to="/my-list"
+            className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
           >
             My List
-          </button>
+          </NavLink>
         </nav>
         <div className="search-box">
           <input
