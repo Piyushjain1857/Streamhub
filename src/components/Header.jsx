@@ -1,11 +1,21 @@
+import { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-function Header({ searchQuery, setSearchQuery }) {
+function Header({ searchQuery, setSearchQuery, theme, toggleTheme }) {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
-    <header className="header">
+    <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-content">
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <h1 className="logo" style={{ cursor: 'pointer' }}>StreamHub</h1>
+        <Link to="/">
+          <h1 className="logo">StreamHub</h1>
         </Link>
         <nav className="nav">
           <NavLink
@@ -43,6 +53,13 @@ function Header({ searchQuery, setSearchQuery }) {
             className="search-input"
           />
         </div>
+        <button 
+          onClick={toggleTheme} 
+          className="theme-toggle"
+          aria-label="Toggle theme"
+        >
+          {theme === 'dark' ? '☀️' : '🌙'}
+        </button>
       </div>
     </header>
   );

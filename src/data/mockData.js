@@ -1,0 +1,902 @@
+export const MOCK_DATA = [
+  {
+    "id": "ai-1",
+    "title": "Sci-Fi Legacy 1",
+    "category": "Web Series",
+    "rating": "9.3",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=1",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=1"
+  },
+  {
+    "id": "ai-2",
+    "title": "Drama Legacy 2",
+    "category": "Movie",
+    "rating": "8.5",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=2",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=2"
+  },
+  {
+    "id": "ai-3",
+    "title": "Comedy Legacy 3",
+    "category": "Web Series",
+    "rating": "8.9",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=3",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=3"
+  },
+  {
+    "id": "ai-4",
+    "title": "Thriller Legacy 4",
+    "category": "Movie",
+    "rating": "8.1",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=4",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=4"
+  },
+  {
+    "id": "ai-5",
+    "title": "Horror Legacy 5",
+    "category": "Web Series",
+    "rating": "8.3",
+    "description": "A gripping web series set in 2026, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=5",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=5"
+  },
+  {
+    "id": "ai-6",
+    "title": "Romance Legacy 6",
+    "category": "Movie",
+    "rating": "8.8",
+    "description": "A gripping movie set in 2026, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=6",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=6"
+  },
+  {
+    "id": "ai-7",
+    "title": "Adventure Legacy 7",
+    "category": "Web Series",
+    "rating": "9.0",
+    "description": "A gripping web series set in 2026, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=7",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=7"
+  },
+  {
+    "id": "ai-8",
+    "title": "Action Legacy 8",
+    "category": "Movie",
+    "rating": "9.5",
+    "description": "A gripping movie set in 2026, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=8",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=8"
+  },
+  {
+    "id": "ai-9",
+    "title": "Sci-Fi Legacy 9",
+    "category": "Web Series",
+    "rating": "9.5",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=9",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=9"
+  },
+  {
+    "id": "ai-10",
+    "title": "Drama Legacy 10",
+    "category": "Movie",
+    "rating": "9.0",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=10",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=10"
+  },
+  {
+    "id": "ai-11",
+    "title": "Comedy Legacy 11",
+    "category": "Web Series",
+    "rating": "8.2",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=11",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=11"
+  },
+  {
+    "id": "ai-12",
+    "title": "Thriller Legacy 12",
+    "category": "Movie",
+    "rating": "8.6",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=12",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=12"
+  },
+  {
+    "id": "ai-13",
+    "title": "Horror Legacy 13",
+    "category": "Web Series",
+    "rating": "7.9",
+    "description": "A gripping web series set in 2026, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=13",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=13"
+  },
+  {
+    "id": "ai-14",
+    "title": "Romance Legacy 14",
+    "category": "Movie",
+    "rating": "7.5",
+    "description": "A gripping movie set in 2026, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=14",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=14"
+  },
+  {
+    "id": "ai-15",
+    "title": "Adventure Legacy 15",
+    "category": "Web Series",
+    "rating": "8.4",
+    "description": "A gripping web series set in 2026, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=15",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=15"
+  },
+  {
+    "id": "ai-16",
+    "title": "Action Legacy 16",
+    "category": "Movie",
+    "rating": "8.9",
+    "description": "A gripping movie set in 2026, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=16",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=16"
+  },
+  {
+    "id": "ai-17",
+    "title": "Sci-Fi Legacy 17",
+    "category": "Web Series",
+    "rating": "9.3",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=17",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=17"
+  },
+  {
+    "id": "ai-18",
+    "title": "Drama Legacy 18",
+    "category": "Movie",
+    "rating": "7.8",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=18",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=18"
+  },
+  {
+    "id": "ai-19",
+    "title": "Comedy Legacy 19",
+    "category": "Web Series",
+    "rating": "9.2",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=19",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=19"
+  },
+  {
+    "id": "ai-20",
+    "title": "Thriller Legacy 20",
+    "category": "Movie",
+    "rating": "8.9",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=20",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=20"
+  },
+  {
+    "id": "ai-21",
+    "title": "Horror Legacy 21",
+    "category": "Web Series",
+    "rating": "9.0",
+    "description": "A gripping web series set in 2026, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=21",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=21"
+  },
+  {
+    "id": "ai-22",
+    "title": "Romance Legacy 22",
+    "category": "Movie",
+    "rating": "8.5",
+    "description": "A gripping movie set in 2026, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=22",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=22"
+  },
+  {
+    "id": "ai-23",
+    "title": "Adventure Legacy 23",
+    "category": "Web Series",
+    "rating": "9.1",
+    "description": "A gripping web series set in 2026, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=23",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=23"
+  },
+  {
+    "id": "ai-24",
+    "title": "Action Legacy 24",
+    "category": "Movie",
+    "rating": "8.1",
+    "description": "A gripping movie set in 2026, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=24",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=24"
+  },
+  {
+    "id": "ai-25",
+    "title": "Sci-Fi Legacy 25",
+    "category": "Web Series",
+    "rating": "7.7",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=25",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=25"
+  },
+  {
+    "id": "ai-26",
+    "title": "Drama Legacy 26",
+    "category": "Movie",
+    "rating": "8.1",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=26",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=26"
+  },
+  {
+    "id": "ai-27",
+    "title": "Comedy Legacy 27",
+    "category": "Web Series",
+    "rating": "8.1",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=27",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=27"
+  },
+  {
+    "id": "ai-28",
+    "title": "Thriller Legacy 28",
+    "category": "Movie",
+    "rating": "9.3",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=28",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=28"
+  },
+  {
+    "id": "ai-29",
+    "title": "Horror Legacy 29",
+    "category": "Web Series",
+    "rating": "8.3",
+    "description": "A gripping web series set in 2026, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=29",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=29"
+  },
+  {
+    "id": "ai-30",
+    "title": "Romance Legacy 30",
+    "category": "Movie",
+    "rating": "7.7",
+    "description": "A gripping movie set in 2026, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=30",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=30"
+  },
+  {
+    "id": "ai-31",
+    "title": "Adventure Legacy 31",
+    "category": "Web Series",
+    "rating": "7.7",
+    "description": "A gripping web series set in 2026, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=31",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=31"
+  },
+  {
+    "id": "ai-32",
+    "title": "Action Legacy 32",
+    "category": "Movie",
+    "rating": "8.1",
+    "description": "A gripping movie set in 2026, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=32",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=32"
+  },
+  {
+    "id": "ai-33",
+    "title": "Sci-Fi Legacy 33",
+    "category": "Web Series",
+    "rating": "8.0",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=33",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=33"
+  },
+  {
+    "id": "ai-34",
+    "title": "Drama Legacy 34",
+    "category": "Movie",
+    "rating": "8.4",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=34",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=34"
+  },
+  {
+    "id": "ai-35",
+    "title": "Comedy Legacy 35",
+    "category": "Web Series",
+    "rating": "9.0",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=35",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=35"
+  },
+  {
+    "id": "ai-36",
+    "title": "Thriller Legacy 36",
+    "category": "Movie",
+    "rating": "9.1",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=36",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=36"
+  },
+  {
+    "id": "ai-37",
+    "title": "Horror Legacy 37",
+    "category": "Web Series",
+    "rating": "9.4",
+    "description": "A gripping web series set in 2026, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=37",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=37"
+  },
+  {
+    "id": "ai-38",
+    "title": "Romance Legacy 38",
+    "category": "Movie",
+    "rating": "7.5",
+    "description": "A gripping movie set in 2026, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=38",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=38"
+  },
+  {
+    "id": "ai-39",
+    "title": "Adventure Legacy 39",
+    "category": "Web Series",
+    "rating": "9.2",
+    "description": "A gripping web series set in 2026, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=39",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=39"
+  },
+  {
+    "id": "ai-40",
+    "title": "Action Legacy 40",
+    "category": "Movie",
+    "rating": "9.2",
+    "description": "A gripping movie set in 2026, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=40",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=40"
+  },
+  {
+    "id": "ai-41",
+    "title": "Sci-Fi Legacy 41",
+    "category": "Web Series",
+    "rating": "8.7",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=41",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=41"
+  },
+  {
+    "id": "ai-42",
+    "title": "Drama Legacy 42",
+    "category": "Movie",
+    "rating": "7.8",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=42",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=42"
+  },
+  {
+    "id": "ai-43",
+    "title": "Comedy Legacy 43",
+    "category": "Web Series",
+    "rating": "7.5",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=43",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=43"
+  },
+  {
+    "id": "ai-44",
+    "title": "Thriller Legacy 44",
+    "category": "Movie",
+    "rating": "9.4",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=44",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=44"
+  },
+  {
+    "id": "ai-45",
+    "title": "Horror Legacy 45",
+    "category": "Web Series",
+    "rating": "9.2",
+    "description": "A gripping web series set in 2026, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=45",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=45"
+  },
+  {
+    "id": "ai-46",
+    "title": "Romance Legacy 46",
+    "category": "Movie",
+    "rating": "8.6",
+    "description": "A gripping movie set in 2026, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=46",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=46"
+  },
+  {
+    "id": "ai-47",
+    "title": "Adventure Legacy 47",
+    "category": "Web Series",
+    "rating": "9.2",
+    "description": "A gripping web series set in 2026, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=47",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=47"
+  },
+  {
+    "id": "ai-48",
+    "title": "Action Legacy 48",
+    "category": "Movie",
+    "rating": "8.5",
+    "description": "A gripping movie set in 2026, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=48",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=48"
+  },
+  {
+    "id": "ai-49",
+    "title": "Sci-Fi Legacy 49",
+    "category": "Web Series",
+    "rating": "7.7",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=49",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=49"
+  },
+  {
+    "id": "ai-50",
+    "title": "Drama Legacy 50",
+    "category": "Movie",
+    "rating": "9.4",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=50",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=50"
+  },
+  {
+    "id": "ai-51",
+    "title": "Comedy Legacy 51",
+    "category": "Web Series",
+    "rating": "7.6",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=51",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=51"
+  },
+  {
+    "id": "ai-52",
+    "title": "Thriller Legacy 52",
+    "category": "Movie",
+    "rating": "9.3",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=52",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=52"
+  },
+  {
+    "id": "ai-53",
+    "title": "Horror Legacy 53",
+    "category": "Web Series",
+    "rating": "7.9",
+    "description": "A gripping web series set in 2026, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=53",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=53"
+  },
+  {
+    "id": "ai-54",
+    "title": "Romance Legacy 54",
+    "category": "Movie",
+    "rating": "8.0",
+    "description": "A gripping movie set in 2026, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=54",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=54"
+  },
+  {
+    "id": "ai-55",
+    "title": "Adventure Legacy 55",
+    "category": "Web Series",
+    "rating": "8.9",
+    "description": "A gripping web series set in 2026, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=55",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=55"
+  },
+  {
+    "id": "ai-56",
+    "title": "Action Legacy 56",
+    "category": "Movie",
+    "rating": "8.3",
+    "description": "A gripping movie set in 2026, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=56",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=56"
+  },
+  {
+    "id": "ai-57",
+    "title": "Sci-Fi Legacy 57",
+    "category": "Web Series",
+    "rating": "7.7",
+    "description": "A gripping web series set in 2026, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=57",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=57"
+  },
+  {
+    "id": "ai-58",
+    "title": "Drama Legacy 58",
+    "category": "Movie",
+    "rating": "7.7",
+    "description": "A gripping movie set in 2026, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=58",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=58"
+  },
+  {
+    "id": "ai-59",
+    "title": "Comedy Legacy 59",
+    "category": "Web Series",
+    "rating": "8.2",
+    "description": "A gripping web series set in 2026, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=59",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=59"
+  },
+  {
+    "id": "ai-60",
+    "title": "Thriller Legacy 60",
+    "category": "Movie",
+    "rating": "8.7",
+    "description": "A gripping movie set in 2026, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=60",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=60"
+  },
+  {
+    "id": "ai-61",
+    "title": "Horror Quest 61",
+    "category": "Web Series",
+    "rating": "7.8",
+    "description": "A gripping web series set in 2025, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=61",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=61"
+  },
+  {
+    "id": "ai-62",
+    "title": "Romance Quest 62",
+    "category": "Movie",
+    "rating": "8.8",
+    "description": "A gripping movie set in 2024, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=62",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=62"
+  },
+  {
+    "id": "ai-63",
+    "title": "Adventure Quest 63",
+    "category": "Web Series",
+    "rating": "7.8",
+    "description": "A gripping web series set in 2025, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=63",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=63"
+  },
+  {
+    "id": "ai-64",
+    "title": "Action Quest 64",
+    "category": "Movie",
+    "rating": "7.9",
+    "description": "A gripping movie set in 2024, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=64",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=64"
+  },
+  {
+    "id": "ai-65",
+    "title": "Sci-Fi Quest 65",
+    "category": "Web Series",
+    "rating": "9.0",
+    "description": "A gripping web series set in 2025, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=65",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=65"
+  },
+  {
+    "id": "ai-66",
+    "title": "Drama Quest 66",
+    "category": "Movie",
+    "rating": "7.5",
+    "description": "A gripping movie set in 2024, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=66",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=66"
+  },
+  {
+    "id": "ai-67",
+    "title": "Comedy Quest 67",
+    "category": "Web Series",
+    "rating": "8.5",
+    "description": "A gripping web series set in 2025, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=67",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=67"
+  },
+  {
+    "id": "ai-68",
+    "title": "Thriller Quest 68",
+    "category": "Movie",
+    "rating": "8.5",
+    "description": "A gripping movie set in 2024, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=68",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=68"
+  },
+  {
+    "id": "ai-69",
+    "title": "Horror Quest 69",
+    "category": "Web Series",
+    "rating": "7.6",
+    "description": "A gripping web series set in 2025, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=69",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=69"
+  },
+  {
+    "id": "ai-70",
+    "title": "Romance Quest 70",
+    "category": "Movie",
+    "rating": "8.9",
+    "description": "A gripping movie set in 2024, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=70",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=70"
+  },
+  {
+    "id": "ai-71",
+    "title": "Adventure Quest 71",
+    "category": "Web Series",
+    "rating": "8.9",
+    "description": "A gripping web series set in 2025, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=71",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=71"
+  },
+  {
+    "id": "ai-72",
+    "title": "Action Quest 72",
+    "category": "Movie",
+    "rating": "8.0",
+    "description": "A gripping movie set in 2024, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=72",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=72"
+  },
+  {
+    "id": "ai-73",
+    "title": "Sci-Fi Quest 73",
+    "category": "Web Series",
+    "rating": "7.6",
+    "description": "A gripping web series set in 2025, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=73",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=73"
+  },
+  {
+    "id": "ai-74",
+    "title": "Drama Quest 74",
+    "category": "Movie",
+    "rating": "7.9",
+    "description": "A gripping movie set in 2024, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=74",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=74"
+  },
+  {
+    "id": "ai-75",
+    "title": "Comedy Quest 75",
+    "category": "Web Series",
+    "rating": "7.6",
+    "description": "A gripping web series set in 2025, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=75",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=75"
+  },
+  {
+    "id": "ai-76",
+    "title": "Thriller Quest 76",
+    "category": "Movie",
+    "rating": "9.1",
+    "description": "A gripping movie set in 2024, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=76",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=76"
+  },
+  {
+    "id": "ai-77",
+    "title": "Horror Quest 77",
+    "category": "Web Series",
+    "rating": "7.7",
+    "description": "A gripping web series set in 2025, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=77",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=77"
+  },
+  {
+    "id": "ai-78",
+    "title": "Romance Quest 78",
+    "category": "Movie",
+    "rating": "8.1",
+    "description": "A gripping movie set in 2024, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=78",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=78"
+  },
+  {
+    "id": "ai-79",
+    "title": "Adventure Quest 79",
+    "category": "Web Series",
+    "rating": "8.3",
+    "description": "A gripping web series set in 2025, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=79",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=79"
+  },
+  {
+    "id": "ai-80",
+    "title": "Action Quest 80",
+    "category": "Movie",
+    "rating": "7.6",
+    "description": "A gripping movie set in 2024, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=80",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=80"
+  },
+  {
+    "id": "ai-81",
+    "title": "Sci-Fi Quest 81",
+    "category": "Web Series",
+    "rating": "7.8",
+    "description": "A gripping web series set in 2025, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=81",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=81"
+  },
+  {
+    "id": "ai-82",
+    "title": "Drama Quest 82",
+    "category": "Movie",
+    "rating": "7.6",
+    "description": "A gripping movie set in 2024, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=82",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=82"
+  },
+  {
+    "id": "ai-83",
+    "title": "Comedy Quest 83",
+    "category": "Web Series",
+    "rating": "7.7",
+    "description": "A gripping web series set in 2025, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=83",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=83"
+  },
+  {
+    "id": "ai-84",
+    "title": "Thriller Quest 84",
+    "category": "Movie",
+    "rating": "7.7",
+    "description": "A gripping movie set in 2024, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=84",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=84"
+  },
+  {
+    "id": "ai-85",
+    "title": "Horror Quest 85",
+    "category": "Web Series",
+    "rating": "8.8",
+    "description": "A gripping web series set in 2025, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=85",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=85"
+  },
+  {
+    "id": "ai-86",
+    "title": "Romance Quest 86",
+    "category": "Movie",
+    "rating": "9.1",
+    "description": "A gripping movie set in 2024, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=86",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=86"
+  },
+  {
+    "id": "ai-87",
+    "title": "Adventure Quest 87",
+    "category": "Web Series",
+    "rating": "7.8",
+    "description": "A gripping web series set in 2025, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=87",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=87"
+  },
+  {
+    "id": "ai-88",
+    "title": "Action Quest 88",
+    "category": "Movie",
+    "rating": "7.9",
+    "description": "A gripping movie set in 2024, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=88",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=88"
+  },
+  {
+    "id": "ai-89",
+    "title": "Sci-Fi Quest 89",
+    "category": "Web Series",
+    "rating": "7.8",
+    "description": "A gripping web series set in 2025, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=89",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=89"
+  },
+  {
+    "id": "ai-90",
+    "title": "Drama Quest 90",
+    "category": "Movie",
+    "rating": "8.8",
+    "description": "A gripping movie set in 2024, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=90",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=90"
+  },
+  {
+    "id": "ai-91",
+    "title": "Comedy Quest 91",
+    "category": "Web Series",
+    "rating": "9.4",
+    "description": "A gripping web series set in 2025, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=91",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=91"
+  },
+  {
+    "id": "ai-92",
+    "title": "Thriller Quest 92",
+    "category": "Movie",
+    "rating": "8.4",
+    "description": "A gripping movie set in 2024, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=92",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=92"
+  },
+  {
+    "id": "ai-93",
+    "title": "Horror Quest 93",
+    "category": "Web Series",
+    "rating": "8.2",
+    "description": "A gripping web series set in 2025, exploring themes of horror and human nature.",
+    "image": "https://loremflickr.com/500/750/horror,movie?lock=93",
+    "backdrop": "https://loremflickr.com/1920/1080/horror,movie?lock=93"
+  },
+  {
+    "id": "ai-94",
+    "title": "Romance Quest 94",
+    "category": "Movie",
+    "rating": "8.6",
+    "description": "A gripping movie set in 2024, exploring themes of romance and human nature.",
+    "image": "https://loremflickr.com/500/750/romance,movie?lock=94",
+    "backdrop": "https://loremflickr.com/1920/1080/romance,movie?lock=94"
+  },
+  {
+    "id": "ai-95",
+    "title": "Adventure Quest 95",
+    "category": "Web Series",
+    "rating": "9.3",
+    "description": "A gripping web series set in 2025, exploring themes of adventure and human nature.",
+    "image": "https://loremflickr.com/500/750/adventure,movie?lock=95",
+    "backdrop": "https://loremflickr.com/1920/1080/adventure,movie?lock=95"
+  },
+  {
+    "id": "ai-96",
+    "title": "Action Quest 96",
+    "category": "Movie",
+    "rating": "8.2",
+    "description": "A gripping movie set in 2024, exploring themes of action and human nature.",
+    "image": "https://loremflickr.com/500/750/action,movie?lock=96",
+    "backdrop": "https://loremflickr.com/1920/1080/action,movie?lock=96"
+  },
+  {
+    "id": "ai-97",
+    "title": "Sci-Fi Quest 97",
+    "category": "Web Series",
+    "rating": "9.2",
+    "description": "A gripping web series set in 2025, exploring themes of sci-fi and human nature.",
+    "image": "https://loremflickr.com/500/750/sci-fi,movie?lock=97",
+    "backdrop": "https://loremflickr.com/1920/1080/sci-fi,movie?lock=97"
+  },
+  {
+    "id": "ai-98",
+    "title": "Drama Quest 98",
+    "category": "Movie",
+    "rating": "7.8",
+    "description": "A gripping movie set in 2024, exploring themes of drama and human nature.",
+    "image": "https://loremflickr.com/500/750/drama,movie?lock=98",
+    "backdrop": "https://loremflickr.com/1920/1080/drama,movie?lock=98"
+  },
+  {
+    "id": "ai-99",
+    "title": "Comedy Quest 99",
+    "category": "Web Series",
+    "rating": "8.3",
+    "description": "A gripping web series set in 2025, exploring themes of comedy and human nature.",
+    "image": "https://loremflickr.com/500/750/comedy,movie?lock=99",
+    "backdrop": "https://loremflickr.com/1920/1080/comedy,movie?lock=99"
+  },
+  {
+    "id": "ai-100",
+    "title": "Thriller Quest 100",
+    "category": "Movie",
+    "rating": "9.1",
+    "description": "A gripping movie set in 2024, exploring themes of thriller and human nature.",
+    "image": "https://loremflickr.com/500/750/thriller,movie?lock=100",
+    "backdrop": "https://loremflickr.com/1920/1080/thriller,movie?lock=100"
+  }
+];
