@@ -6,7 +6,6 @@ import CategoryTabs from './components/CategoryTabs';
 import ContentGrid from './components/ContentGrid';
 import Footer from './components/Footer';
 import MovieDetailsModal from './components/MovieDetailsModal';
-import './App.css';
 
 function App() {
   const [data, setData] = useState([]);
@@ -15,7 +14,7 @@ function App() {
   const [searchLoading, setSearchLoading] = useState(false);
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [visibleCount, setVisibleCount] = useState(40); // Pagination for UI performance
-  
+
   const location = useLocation();
   const activeCategory = location.pathname === '/movies' ? 'Movie' :
     location.pathname === '/web-series' ? 'Web Series' :
@@ -35,7 +34,7 @@ function App() {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('streamhub_theme', theme);
   }, [theme]);
-  
+
   const toggleTheme = () => {
     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
   };
@@ -64,22 +63,21 @@ function App() {
     const fetchDiscoveryData = async () => {
       try {
         setLoading(true);
-        console.log('Fetching massive content library...');
-        
+
         // Fetch 3 pages in parallel for speed
         const pages = [0, 1, 2];
-        const fetchPromises = pages.map(page => 
+        const fetchPromises = pages.map(page =>
           fetch(`https://api.tvmaze.com/shows?page=${page}`).then(res => res.json())
         );
-        
+
         const results = await Promise.all(fetchPromises);
         const combined = results.flat();
-        
+
         if (combined && Array.isArray(combined)) {
           const mapped = combined.map(mapItem);
           // Sort by rating then year for high-quality discoverability
           mapped.sort((a, b) => b.rating - a.rating || b.year - a.year);
-          
+
           setDefaultData(mapped);
           setData(mapped);
         }
@@ -196,8 +194,8 @@ function App() {
           <div className="filter-bar">
             <CategoryTabs activeCategory={activeCategory} />
             <div className="filter-meta">
-               {searchLoading && <span className="loading-tag">Searching Database...</span>}
-               <span className="count-tag">{filteredData.length} Total Titles</span>
+              {searchLoading && <span className="loading-tag">Searching Database...</span>}
+              <span className="count-tag">{filteredData.length} Total Titles</span>
             </div>
           </div>
         )}
@@ -253,8 +251,8 @@ function App() {
       <Footer />
 
       {selectedMovie && (
-        <MovieDetailsModal 
-          movie={selectedMovie} 
+        <MovieDetailsModal
+          movie={selectedMovie}
           onClose={handleCloseModal}
           isInList={myList.some(i => i.title === selectedMovie.title)}
           toggleList={toggleMyList}

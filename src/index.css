@@ -1,8 +1,3 @@
-/* 
-  STREAMHUB PREMIUM DESIGN SYSTEM 
-  A State-of-the-Art, Cinematic Experience 
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
@@ -12,24 +7,24 @@
   --text-main: #ffffff;
   --text-dim: #a0a0c0;
   --text-muted: #64748b;
-  
+
   /* Brand Accents */
   --accent-cyan: #00F0FF;
   --accent-purple: #D000FF;
   --accent-glow: rgba(0, 240, 255, 0.4);
   --accent-gradient: linear-gradient(135deg, #00F0FF 0%, #D000FF 100%);
-  
+
   /* Glassmorphism System */
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-blur: blur(24px);
-  
+
   /* Spacing & Radii */
   --radius-xl: 32px;
   --radius-lg: 20px;
   --radius-md: 12px;
   --container-max: 1440px;
-  
+
   /* Transitions */
   --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -58,9 +53,9 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  
+
   /* Animated Mesh Background */
-  background-image: 
+  background-image:
     radial-gradient(circle at 0% 0%, rgba(208, 0, 255, 0.08) 0%, transparent 50%),
     radial-gradient(circle at 100% 100%, rgba(0, 240, 255, 0.08) 0%, transparent 50%);
   background-attachment: fixed;
@@ -128,7 +123,8 @@ body {
   padding: 0.5rem 0;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-main);
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
@@ -268,10 +264,19 @@ body {
 }
 
 @keyframes pulse {
-  0% { opacity: 0.5; }
-  50% { opacity: 1; }
-  100% { opacity: 0.5; }
+  0% {
+    opacity: 0.5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
 }
+
 .hero {
   position: relative;
   height: 95vh;
@@ -299,7 +304,7 @@ body {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, var(--bg-dark) 0%, rgba(3, 3, 8, 0.4) 50%, transparent 100%),
-              linear-gradient(0deg, var(--bg-dark) 0%, transparent 40%);
+    linear-gradient(0deg, var(--bg-dark) 0%, transparent 40%);
   z-index: 1;
 }
 
@@ -467,7 +472,7 @@ body {
 .card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 60%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -555,7 +560,7 @@ body {
   right: -50px;
   font-size: 20rem;
   font-weight: 900;
-  color: rgba(255,255,255,0.015);
+  color: rgba(255, 255, 255, 0.015);
   pointer-events: none;
   line-height: 0.8;
   z-index: 0;
@@ -684,20 +689,48 @@ body {
 
 /* 7. Animations */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 8. Mobile Responsiveness */
 @media (max-width: 1024px) {
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .header-content { padding: 0.6rem 1.5rem; }
-  .nav { display: none; }
-  .hero-title { font-size: 3.5rem; }
-  .content-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
-  .content-card.large { grid-column: span 1; }
-  .footer-grid { grid-template-columns: 1fr; text-align: center; }
+  .header-content {
+    padding: 0.6rem 1.5rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .content-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .content-card.large {
+    grid-column: span 1;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }

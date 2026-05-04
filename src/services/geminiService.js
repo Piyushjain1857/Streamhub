@@ -35,38 +35,3 @@ export const getMovieDetails = async (movieTitle, category) => {
     return "Experience this masterpiece today.";
   }
 };
-
-export const generateMovieDatabase = async () => {
-  try {
-    const model = genAI.getGenerativeModel({ 
-      model: "gemini-3-flash-preview",
-      generationConfig: { responseMimeType: "application/json" }
-    });
-
-    const prompt = `Generate a database of 100 movies and web series. 
-    Requirements:
-    - 60 titles should be from the year 2026 (imagine they are the latest releases).
-    - 40 titles should be trending/popular titles from 2024-2025.
-    - Include a mix of "Movie" and "Web Series" categories.
-    - For each item, provide: id (unique string), title, category, rating (float 7.0-9.8), description (catchy, 1 sentence), image (Unsplash URL with relevant keywords), backdrop (Unsplash URL wide).
-    
-    Return ONLY a JSON array of objects.
-    Example object:
-    {
-      "id": "m1",
-      "title": "Neon Horizons",
-      "category": "Movie",
-      "rating": 9.2,
-      "description": "A breathtaking journey through a cyberpunk future where memories are currency.",
-      "image": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=500&h=750&fit=crop",
-      "backdrop": "https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=1920&h=1080&fit=crop"
-    }`;
-
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    return JSON.parse(response.text());
-  } catch (error) {
-    console.error("Gemini Database Generation Error:", error);
-    return []; // Return empty array so App.jsx can handle it
-  }
-};
