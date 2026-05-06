@@ -35,19 +35,8 @@ const ContentGrid = ({ filteredData, activeCategory, myList, toggleMyList, onSel
           </div>
 
           {hasMore && (
-            <div className="load-more-container" style={{ textAlign: 'center', marginTop: '4rem', marginBottom: '3rem' }}>
-              <button
-                className="load-more-btn"
-                onClick={onLoadMore}
-                style={{
-                  padding: '1.2rem 3rem',
-                  borderRadius: '16px',
-                  fontSize: '1.1rem',
-                  fontWeight: '700',
-                  cursor: 'pointer',
-                  transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
-                }}
-              >
+            <div className="load-more-container">
+              <button className="btn btn-primary load-more-btn" onClick={onLoadMore}>
                 Load More Content
               </button>
             </div>
