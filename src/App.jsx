@@ -1,21 +1,21 @@
 import { useState, useEffect, useRef } from 'react';
-import { useLocation, Routes, Route, Navigate } from 'react-router-dom';
+import { useNavigate, useLocation, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import CategoryTabs from './components/CategoryTabs';
 import ContentGrid from './components/ContentGrid';
 import Footer from './components/Footer';
-import MovieDetailsModal from './components/MovieDetailsModal';
+import MovieDetails from './components/MovieDetails';
 
 function App() {
   const [data, setData] = useState([]);
   const [defaultData, setDefaultData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchLoading, setSearchLoading] = useState(false);
-  const [selectedMovie, setSelectedMovie] = useState(null);
   const [visibleCount, setVisibleCount] = useState(40); // Pagination for UI performance
 
   const location = useLocation();
+  const navigate = useNavigate();
   const activeCategory = location.pathname === '/movies' ? 'Movie' :
     location.pathname === '/web-series' ? 'Web Series' :
       location.pathname === '/my-list' ? 'My List' : 'All';
@@ -144,12 +144,8 @@ function App() {
     }
   };
 
-  const handleOpenModal = (movie) => {
-    setSelectedMovie(movie);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedMovie(null);
+  const handleNavigateToMovie = (movie) => {
+    navigate(`/movie/${movie.id}`);
   };
 
   const loadMore = () => {
@@ -181,85 +177,109 @@ function App() {
         theme={theme}
         toggleTheme={toggleTheme}
       />
-      {location.pathname === '/' && (
-        <Hero
-          items={trendingItems.slice(0, 8)}
-          myList={myList}
-          toggleList={toggleMyList}
-          onSelect={handleOpenModal}
-        />
-      )}
+      
       <main className="main-content" ref={contentRef}>
-        {location.pathname === '/' && (
-          <div className="filter-bar">
-            <CategoryTabs activeCategory={activeCategory} />
-            <div className="filter-meta">
-              {searchLoading && <span className="loading-tag">Searching Database...</span>}
-              <span className="count-tag">{filteredData.length} Total Titles</span>
-            </div>
-          </div>
-        )}
-
         <Routes>
           <Route path="/" element={
-            <ContentGrid
-              filteredData={filteredData.slice(0, visibleCount)}
-              activeCategory={activeCategory}
-              myList={myList}
-              toggleMyList={toggleMyList}
-              onSelect={handleOpenModal}
-              hasMore={visibleCount < filteredData.length}
-              onLoadMore={loadMore}
-            />
+            <>
+              <Hero
+                items={trendingItems.slice(0, 8)}
+                myList={myList}
+                toggleList={toggleMyList}
+                onSelect={handleNavigateToMovie}
+              />
+              <div className="filter-bar">
+                <CategoryTabs activeCategory={activeCategory} />
+                <div className="filter-meta">
+                  {searchLoading && <span className="loading-tag">Searching Database...</span>}
+                  <span className="count-tag">{filteredData.length} Total Titles</span>
+                </div>
+              </div>
+              <ContentGrid
+                filteredData={filteredData.slice(0, visibleCount)}
+                activeCategory={activeCategory}
+                myList={myList}
+                toggleMyList={toggleMyList}
+                onSelect={handleNavigateToMovie}
+                hasMore={visibleCount < filteredData.length}
+                onLoadMore={loadMore}
+              />
+            </>
           } />
           <Route path="/movies" element={
-            <ContentGrid
-              filteredData={filteredData.slice(0, visibleCount)}
-              activeCategory={activeCategory}
-              myList={myList}
-              toggleMyList={toggleMyList}
-              onSelect={handleOpenModal}
-              hasMore={visibleCount < filteredData.length}
-              onLoadMore={loadMore}
-            />
+            <>
+              <div className="filter-bar">
+                <CategoryTabs activeCategory={activeCategory} />
+                <div className="filter-meta">
+                  {searchLoading && <span className="loading-tag">Searching Database...</span>}
+                  <span className="count-tag">{filteredData.length} Total Titles</span>
+                </div>
+              </div>
+              <ContentGrid
+                filteredData={filteredData.slice(0, visibleCount)}
+                activeCategory={activeCategory}
+                myList={myList}
+                toggleMyList={toggleMyList}
+                onSelect={handleNavigateToMovie}
+                hasMore={visibleCount < filteredData.length}
+                onLoadMore={loadMore}
+              />
+            </>
           } />
           <Route path="/web-series" element={
-            <ContentGrid
-              filteredData={filteredData.slice(0, visibleCount)}
-              activeCategory={activeCategory}
-              myList={myList}
-              toggleMyList={toggleMyList}
-              onSelect={handleOpenModal}
-              hasMore={visibleCount < filteredData.length}
-              onLoadMore={loadMore}
-            />
+            <>
+              <div className="filter-bar">
+                <CategoryTabs activeCategory={activeCategory} />
+                <div className="filter-meta">
+                  {searchLoading && <span className="loading-tag">Searching Database...</span>}
+                  <span className="count-tag">{filteredData.length} Total Titles</span>
+                </div>
+              </div>
+              <ContentGrid
+                filteredData={filteredData.slice(0, visibleCount)}
+                activeCategory={activeCategory}
+                myList={myList}
+                toggleMyList={toggleMyList}
+                onSelect={handleNavigateToMovie}
+                hasMore={visibleCount < filteredData.length}
+                onLoadMore={loadMore}
+              />
+            </>
           } />
           <Route path="/my-list" element={
-            <ContentGrid
-              filteredData={filteredData}
-              activeCategory={activeCategory}
-              myList={myList}
-              toggleMyList={toggleMyList}
-              onSelect={handleOpenModal}
-              hasMore={false}
-              onLoadMore={null}
+            <>
+              <div className="filter-bar">
+                <CategoryTabs activeCategory={activeCategory} />
+                <div className="filter-meta">
+                  {searchLoading && <span className="loading-tag">Searching Database...</span>}
+                  <span className="count-tag">{filteredData.length} Total Titles</span>
+                </div>
+              </div>
+              <ContentGrid
+                filteredData={filteredData}
+                activeCategory={activeCategory}
+                myList={myList}
+                toggleMyList={toggleMyList}
+                onSelect={handleNavigateToMovie}
+                hasMore={false}
+                onLoadMore={null}
+              />
+            </>
+          } />
+          <Route path="/movie/:id" element={
+            <MovieDetails 
+              data={data} 
+              myList={myList} 
+              toggleList={toggleMyList} 
             />
           } />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
       <Footer />
-
-      {selectedMovie && (
-        <MovieDetailsModal
-          movie={selectedMovie}
-          onClose={handleCloseModal}
-          isInList={myList.some(i => i.title === selectedMovie.title)}
-          toggleList={toggleMyList}
-        />
-      )}
     </div>
   );
 }
+
 
 export default App;
